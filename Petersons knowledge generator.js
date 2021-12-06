@@ -18,6 +18,19 @@ const mainQuotes = [ `If you can't understand why someone is doing something, lo
 `Nietzsche said that a man’s worth was determined by how much truth he could tolerate`,
 `The secret to your existence is right in front of you. It manifests itself as all those things you know you should do, but are avoiding`,
 ];
-console.log(mainQuotes.length);
+
+const questions = ["Why do people do what they do", "What should I do moving forward?", "Give me some advice"];
+const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+
+console.log(randomQuestion);
+
+function answerQuestion(question) {
+    
+};
+
+
+
+
+/*console.log(mainQuotes.length);
 console.log(commonClosers.length);
-console.log(commonOpeners.length);
+console.log(commonOpeners.length);*/
