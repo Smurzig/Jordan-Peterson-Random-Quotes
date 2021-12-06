@@ -19,16 +19,34 @@ const mainQuotes = [ `If you can't understand why someone is doing something, lo
 `The secret to your existence is right in front of you. It manifests itself as all those things you know you should do, but are avoiding`,
 ];
 
+const whyArr = [mainQuotes[0], mainQuotes[1], mainQuotes[5], mainQuotes[7], mainQuotes[8]];
+const whatArr = [mainQuotes[2], mainQuotes[3], mainQuotes[4], mainQuotes[6], mainQuotes[9]];
+
 const questions = ["Why do people do what they do", "What should I do moving forward?", "Give me some advice"];
-const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+const randomAdvice = mainQuotes[Math.floor(Math.random() * mainQuotes.length)];
+const randomOpener = commonOpeners[Math.floor(Math.random() * commonOpeners.length)];
+const randomCloser = commonClosers[Math.floor(Math.random() * commonClosers.length)];
+const randomWhy = whyArr[Math.floor(Math.random() * whyArr.length)];
+const randomWhat = whatArr[Math.floor(Math.random() * whatArr.length)];
 
 console.log(randomQuestion);
 
 function answerQuestion(question) {
-    
+    switch(question) {
+        case "Why do people do what they do": console.log(`${randomOpener}, ${randomWhy}. ${randomCloser}`);
+        break;
+        
+        case "What should I do moving forward?": console.log(`${randomOpener}, ${randomWhat}. ${randomCloser}`);
+        break;
+
+        case "Give me some advice": console.log(`${randomOpener}, ${randomAdvice}. ${randomCloser}`);
+        break;
+
+        default: console.log("Invalid request");
+    };
 };
 
-
+answerQuestion("Why do people do what they do");
 
 
 /*console.log(mainQuotes.length);
